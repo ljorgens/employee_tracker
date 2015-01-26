@@ -1,0 +1,18 @@
+<h1>Employee list</h1>
+
+<p>Here are all your peons:</p>
+
+<ul>
+  <% @employees.each do |employee| %>
+  <li><%= employee.name %></li>
+  <% end %>
+</ul>
+
+<p>Add a new peon:</p>
+
+<form action='/employees' method='post'>
+  <label for='name'>name</label>
+  <input id='name' name='name' type='text'>
+
+  <button type="submit">Add employee</button>
+</form>
