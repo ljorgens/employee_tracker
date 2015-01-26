@@ -1,18 +1,18 @@
-<h1>Employee list</h1>
+<h1>Division list</h1>
 
-<p>Here are all your peons:</p>
+<p>Here are all your divisions:</p>
 
 <ul>
-  <% @employees.each do |employee| %>
-  <li><%= employee.name %></li>
+  <% @divisions.each do |division| %>
+  <li><a href="/divisions/<%= division.id() %>"><%= division.name %></a></li>
   <% end %>
 </ul>
 
-<p>Add a new peon:</p>
+<p>Add a new division:</p>
 
-<form action='/employees' method='post'>
-  <label for='name'>name</label>
+<form action='/divisions' method='post'>
+  <label for='name'>Name: </label>
   <input id='name' name='name' type='text'>
 
-  <button type="submit">Add employee</button>
+  <button type="submit">Add division</button>
 </form>
